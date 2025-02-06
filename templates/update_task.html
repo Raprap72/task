@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Update Task</h1>
+            <a href="/" class="btn">Back to Task List</a> <!-- Changed to / -->
+        </header>
+
+        <section class="update-task">
+			<div class="form-card">
+				<h2>Update Task</h2>
+				<form action="{% if task[0] %}{{ url_for('update_task', task_id=task[0]) }}{% else %}{{ url_for('add_task') }}{% endif %}" method="POST">
+					<label for="task_name">Task Name</label>
+					<input type="text" id="task_name" name="task_name" value="{{ task[1] }}" required maxlength="20">
+
+					<label for="description">Task Details</label>
+					<textarea id="description" name="description" rows="4" maxlength="100">{{ task[2] }}</textarea>
+
+					<label for="status">Status</label>
+					<select id="status" name="status" required>
+						<option value="Not Started" {% if task[3] == 'Not Started' %}selected{% endif %}>Not Started</option>
+						<option value="In Progress" {% if task[3] == 'In Progress' %}selected{% endif %}>In Progress</option>
+						<option value="Completed" {% if task[3] == 'Completed' %}selected{% endif %}>Completed</option>
+					</select>
+
+					<button type="submit" class="btn">Update Task</button>
+					<a href="/" class="btn cancel">Cancel</a>
+				</form>
+			</div>
+		</section>
+    </div>
+</body>
+</html>

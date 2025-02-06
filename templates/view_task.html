@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Details</h1>
+            <a href="/" class="btn">Back to Task List</a>
+        </header>
+
+        <section class="view-task">
+			<div class="card">
+				<h2>Task: {{ task[0] }}</h2> <!-- Task Name -->
+				<p><strong>Status:</strong> {{ task[2] }}</p> <!-- Task Status -->
+				<p><strong>Details:</strong></p>
+				<p>{{ task[1] }}</p> <!-- Task Details -->
+				<a href="/" class="btn">Back to Task List</a>
+			</div>
+		</section>
+    </div>
+</body>
+</html>

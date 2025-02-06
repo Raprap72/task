@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Management System</h1>
+            <a href="/add" class="btn">Add New Task</a> <!-- Changed to /add -->
+        </header>
+
+        <section class="task-list">
+			<h2>Task List</h2>
+			<table class="task-table">
+				<thead>
+					<tr>
+						<th>Task Name</th>
+						<th>Status</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for task in tasks %}
+					<tr>
+						<td>{{ task[1] }}</td> <!-- Task Name -->
+						<td>{{ task[3] }}</td> <!-- Task Status -->
+						<td>
+							<a href="/view/{{ task[0] }}" class="btn">View</a>
+							<a href="/update/{{ task[0] }}" class="btn">Edit</a>
+							<a href="/delete/{{ task[0] }}" class="btn delete">Delete</a>
+						</td>
+					</tr>
+					{% else %}
+					<tr>
+						<td colspan="3">No tasks available.</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</section>
+    </div>
+</body>
+</html>
