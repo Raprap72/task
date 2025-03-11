@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f57e7e;
     color: #333;
 }
 
@@ -11,7 +11,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: #cbf6db;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -26,11 +26,11 @@ header {
 
 header h1 {
     font-size: 1.8em;
-    color: #4CAF50;
+    color: #315f72;
 }
 
 header .btn {
-    background: #4CAF50;
+    background: #315f72	;
     color: #fff;
     padding: 10px 15px;
     text-decoration: none;
@@ -39,15 +39,15 @@ header .btn {
 }
 
 header .btn:hover {
-    background: #45a049;
+    background: #7fc3c0;
 }
 
 /* Task List */
 .task-list h2 {
-    color: #555;
+    color: #315f72;
     margin-bottom: 15px;
     font-size: 1.5em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #141414;
     padding-bottom: 5px;
 }
 
@@ -88,8 +88,17 @@ header .btn:hover {
     transition: background 0.3s;
 }
 
+.btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #315f72;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
 .btn:hover {
-    background: #0b7dda;
+    background: #7fc3c0;
 }
 
 .btn.delete {
@@ -97,7 +106,7 @@ header .btn:hover {
 }
 
 .btn.delete:hover {
-    background: #da190b;
+    background: #8B0000;
 }
 
 /* Form Styles */
@@ -119,24 +128,6 @@ form input, form select, form button {
     border-radius: 4px;
 }
 
-form button {
-    background: #4CAF50;
-    color: #fff;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #45a049;
-}
-
-/* Footer (Optional) */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: #888;
-}
-
 /* Task List Item Styling */
 .task-list ul li {
     margin-bottom: 15px;
@@ -156,6 +147,7 @@ footer {
 
 /* General Styling for Table */
 .task-table {
+	background: #e7e8d1;
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -169,29 +161,11 @@ footer {
 }
 
 .task-table th {
-    background-color: #f4f4f4;
+    background-color: #efb5a3;
 }
 
 .task-table td {
     vertical-align: middle;
-}
-
-/* Button Styles */
-.btn {
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #007BFF;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.btn.delete {
-    background-color: #DC3545;
-}
-
-.btn:hover {
-    opacity: 0.9;
 }
 
 /* View and Update Task Page Styling */
@@ -201,19 +175,19 @@ footer {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: #fefefe;
+    background-color: #e7e8d1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .view-task .card h2, .update-task h2 {
-    color: #333;
+    color: #315f72;
     margin-bottom: 20px;
 }
 
 .view-task .card p, .update-task label {
     font-size: 16px;
-    color: #555;
+    color: #315f72;
     margin: 10px 0;
 }
 
@@ -231,31 +205,21 @@ footer {
     display: inline-block;
     margin: 15px 5px 0;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #315f72;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
+}
+
+.update-task .btn:hover {
+	background: #7fc3c0;
 }
 
 .update-task .btn.cancel {
     background-color: #DC3545;
 }
 
-.update-task .btn:hover {
-    opacity: 0.9;
-}
-
-.view-task .btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.view-task .btn:hover {
-    opacity: 0.9;
+.update-task .btn.cancel:hover {
+	background: #8B0000;
 }
